@@ -550,9 +550,8 @@ async function __wbg_init(input) {
     if (wasm !== undefined) return wasm;
 
     if (typeof input === 'undefined') {
-        input = new URL('vrp.wasm', import.meta.url);
+        input = new URL('vrp_bg.wasm', import.meta.url);
     }
-
     const imports = __wbg_get_imports();
 
     if (typeof input === 'string' || (typeof Request === 'function' && input instanceof Request) || (typeof URL === 'function' && input instanceof URL)) {
